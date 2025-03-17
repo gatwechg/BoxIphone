@@ -13,6 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { SiFacebook, SiWhatsapp, SiGmail, SiX } from "react-icons/si";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -25,7 +26,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function Contact() {
   const { toast } = useToast();
-  
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -44,11 +45,38 @@ export default function Contact() {
     form.reset();
   }
 
+  const socialLinks = [
+    {
+      name: "Facebook",
+      icon: SiFacebook,
+      url: "https://facebook.com/boxiphone",
+      color: "text-blue-600",
+    },
+    {
+      name: "WhatsApp",
+      icon: SiWhatsapp,
+      url: "https://wa.me/1234567890",
+      color: "text-green-500",
+    },
+    {
+      name: "X (Twitter)",
+      icon: SiX,
+      url: "https://x.com/boxiphone",
+      color: "text-gray-800",
+    },
+    {
+      name: "Gmail",
+      icon: SiGmail,
+      url: "mailto:info@boxiphone.com",
+      color: "text-red-500",
+    },
+  ];
+
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
-        
+
         <div className="grid gap-8 mb-8">
           <div>
             <h2 className="text-2xl font-semibold mb-2">Visit Our Store</h2>
@@ -60,7 +88,21 @@ export default function Contact() {
           </div>
 
           <div>
-            <h2 className="text-2xl font-semibold mb-2">Contact Information</h2>
+            <h2 className="text-2xl font-semibold mb-4">Connect With Us</h2>
+            <div className="flex gap-6 mb-6">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`hover:opacity-80 transition-opacity ${social.color}`}
+                  title={social.name}
+                >
+                  <social.icon className="w-8 h-8" />
+                </a>
+              ))}
+            </div>
             <p className="text-muted-foreground">
               Email: info@boxiphone.com<br />
               Phone: (555) 123-4567
