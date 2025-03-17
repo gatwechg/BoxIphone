@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { ShoppingCart, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SiApple } from "react-icons/si";
 import {
   Sheet,
   SheetContent,
@@ -32,7 +33,10 @@ export default function Navbar() {
     <nav className="border-b">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/">
-          <a className="text-2xl font-bold">BoxiPhone</a>
+          <a className="flex items-center space-x-2">
+            <SiApple className="h-8 w-8" />
+            <span className="text-2xl font-bold">BoxiPhone</span>
+          </a>
         </Link>
 
         {/* Desktop Navigation */}
