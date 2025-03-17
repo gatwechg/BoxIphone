@@ -12,8 +12,10 @@ export default function Hero() {
               <span className="text-primary">iPhone 15</span> Collection
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
-              Discover the perfect iPhone for you. With powerful features and
-              stunning design, there's never been a better time to upgrade.
+              Discover the revolutionary iPhone 15 Pro with the world's first
+              3nm chip, titanium design, and pro-grade camera system. Transform
+              how you capture, create, and communicate with the most powerful
+              iPhone ever made.
             </p>
             <div className="mt-8 flex gap-4">
               <Link href="/products">
