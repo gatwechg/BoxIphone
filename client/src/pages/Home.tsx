@@ -29,16 +29,17 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <img
-              src="https://images.unsplash.com/photo-1493857671505-72967e2e2760"
-              alt="Store Interior"
+              src="https://images.unsplash.com/photo-1695048663867-e41259c93b3b"
+              alt="iPhone 15 Display"
               className="rounded-lg"
             />
             <div>
-              <h2 className="text-3xl font-bold mb-4">Visit Our Store</h2>
+              <h2 className="text-3xl font-bold mb-4">Experience iPhone 15</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Experience the latest iPhone models in person at our modern retail
-                locations. Our expert staff is ready to help you find the perfect
-                device for your needs.
+                Visit our modern retail locations to experience the revolutionary
+                iPhone 15 series in person. Our expert staff is ready to demonstrate
+                the groundbreaking features and help you find the perfect iPhone for
+                your needs.
               </p>
             </div>
           </div>

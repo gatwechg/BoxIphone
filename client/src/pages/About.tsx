@@ -5,8 +5,8 @@ export default function About() {
         <h1 className="text-4xl font-bold mb-8">About BoxiPhone</h1>
 
         <img
-          src="https://images.unsplash.com/photo-1529579001084-c58ac6686ec2"
-          alt="Store Interior"
+          src="https://images.unsplash.com/photo-1695048663044-7093f84baef9"
+          alt="iPhone 15 Series"
           className="rounded-lg mb-8 w-full"
         />
 
